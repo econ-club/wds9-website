@@ -1,0 +1,557 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+
+html , body {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 20%;
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color:#0671eb79 ;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur {
+    height: 400px;
+    width: 400px;
+    background-color:#0671eb47 ;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+
+}
+
+#nav {
+    height: 100px;
+    width: 100%;
+   /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 99;
+    
+}
+
+.nav-2 {
+    display: flex;
+    gap: 3vw;
+
+}
+
+.nav-2 h2 {
+    color: whitesmoke;
+    font-size: 21px;
+}
+
+#nav img {
+    height: 140px;
+    margin-right: 350px;
+    
+}
+
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 5000;
+    color:white;
+    font-size: 20px;
+}
+
+video{
+     
+    height: 100%;
+      width: 100%;
+      position: fixed;
+      object-fit: cover;
+      z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgb(0,0,0,0.6);
+
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1 {
+    font-size: 60px;
+    font-weight: 900;
+    position: relative;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#page1 h1::before{
+    content: "WOLF of DALAL STREET";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 2px #0671eb;
+    z-index: 10;
+
+}
+
+
+#page1 p {
+    font-size: 25px;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 0.1px;
+    letter-spacing: 0.1px;
+}
+
+#page2 {
+   min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#speaker {
+    height: 100vh;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#speaker img{
+    height: 300px;
+    width: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#speaker-in{
+    width: 40%;
+    text-align: center;
+}
+
+#speaker-in h3{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: violet;
+}
+
+#speaker-in p{
+    font-size: 22px;
+    line-height: 25px;
+    word-spacing: 0.1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+#cards-container{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+
+.slider{
+  width: 1200px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+.slides{
+  width: 600%;
+  height: 500px;
+  display: flex;
+}
+ .slides input{
+  display: none;
+ }
+ .slide{
+  width: 20%;
+  transition: 2s;
+ }
+ .slide img{
+  width: 800px;
+  height: 500px;
+  
+ }
+ .navigation-manual
+ {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+ }
+ .manual-btn{
+  border: 2px solid rgb(183, 70, 183);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+ }
+ .manual-btn:not(:last-child){
+  margin-right: 40px;
+ }
+
+ .manual-btn:hover{
+  background: plum ;
+ }
+ #radio1:checked ~ .first{
+  margin-left: 0;
+ }
+ #radio2:checked ~ .first{
+  margin-left: -20%;
+ }
+ #radio3:checked ~ .first{
+  margin-left: -40%;
+ }
+ #radio4:checked ~ .first{
+  margin-left: -60%;
+ }
+
+ .navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+ }
+ .navigation-auto div{
+  border: 2px solid rgb(183, 70, 183);
+  padding: 5px;
+  border-radius: 10px;
+    transition: 1s;
+ }
+ .navigation-auto div:not(:last-child){
+  margin-right: 40px;
+ }
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: plum;
+}
+#radio2:checked ~ .navigation-auto .auto-btn1{
+  background: plum;
+}
+#radio3:checked ~ .navigation-auto .auto-btn1{
+  background: plum;
+}
+#radio4:checked ~ .navigation-auto .auto-btn1{
+  background: plum;
+}
+
+/* Default styles for larger screens */
+/* Add your existing CSS code here */
+
+/* Media query for screens with a maximum width of 768px (typical for mobile phones) */
+@media only screen and (max-width: 768px) {
+    /* Adjust the styles for smaller screens here */
+
+    video {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+        #cursor,
+  #cursor-blur {
+    display: none;
+  }
+  
+    /* Navigation bar styles for mobile */
+    #nav {
+      height: 60px;
+      padding: 0 10px;
+    }
+  
+    /* Logo styles for mobile */
+    #nav img {
+      height: 80px;
+      margin-right: 20px;
+    }
+  
+    /* Heading styles for mobile */
+    #page1 h1 {
+      font-size: 36px;
+    }
+  
+    /* Paragraph styles for mobile */
+    #page1 p {
+      font-size: 16px;
+      width: 80%;
+    }
+  
+ 
+  
+    /* Card styles for mobile */
+    .card {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Media query for screens with a maximum width of 600px (smaller mobile devices) */
+  @media only screen and (max-width: 600px) {
+    /* Adjust the styles for smaller screens here */
+  
+    /* Navigation bar styles for smaller mobile devices */
+    #nav {
+      height: 50px;
+      padding: 0 5px;
+    }
+    
+
+    .nav-2 h2{
+        font-size: 10px;
+        padding: 0 14px;
+    }
+  
+    /* Logo styles for smaller mobile devices */
+    #nav img {
+      height: 60px;
+      margin-right: 10px;
+    }
+  
+    /* Heading styles for smaller mobile devices */
+    #page1 h1 {
+      font-size: 50px;
+    }
+  
+    /* Paragraph styles for smaller mobile devices */
+    #page1 p {
+      font-size: 28px;
+      width: 90%;
+    }
+  
+  
+    /* Card styles for smaller mobile devices */
+    .card {
+     display: none;
+    }
+  }
+
+  /* Default styles for larger screens */
+/* Add your existing CSS code here */
+
+/* Media query for screens with a maximum width of 600px (smaller mobile devices) */
+@media only screen and (max-width: 600px) {
+    /* Adjust the styles for smaller screens here */
+  
+    /* Speaker section styles for smaller mobile devices */
+    #speaker {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    /* Image wds.speaker.wds.png style for smaller mobile devices */
+    #speaker img:first-child {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+  
+    /* Speaker-in div styles for smaller mobile devices */
+    #speaker-in {
+      text-align: center;
+    }
+  
+    /* Center the speaker-in content */
+    #speaker-in h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: 100;
+    }
+  
+    #speaker-in p {
+      font-size: 10px;
+      line-height: 11px;
+    }
+  
+    /* Image wds.speaker.png style for smaller mobile devices */
+    #speaker img:last-child {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+  }
+  .container{
+    max-width: 1200px;
+    width: 95%;
+    margin-left: 18%;
+    margin-right: 20%;
+}
+.slider-wrapper{
+    position: relative;
+}
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.slider-wrapper .slide-button:hover{
+    background:#444;
+
+}
+.slider-wrapper .slide-button#prev-slide{
+    left:-20px;
+    display: none;
+
+}
+.slider-wrapper .slide-button#next-slide{
+    right:-20px;
+   
+
+}
+.slider-wrapper .image-list{
+         display:grid;
+         gap: 18px;
+         font-size: 0;
+         margin-bottom: 30px;
+         list-style: none;
+         overflow-x: auto;
+         scrollbar-width: none;
+         grid-template-columns: repeat(10,1fr);
+
+}
+.slider-wrapper .image-list::-webkit-scrollbar
+{
+    display: none;
+}
+.slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+   
+}
+.container .slider-scrollbar
+{
+    height:24px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+.slider-scrollbar .scrollbar-track{
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track
+{
+    height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb{
+
+    position: absolute;
+  background: #790ba1;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+.slider-scrollbar .scrollbar-thumb:active{
+    cursor:grabbing;
+    height: 100%;
+    top:-2px;
+}
+.slider-scrollbar .scrollbar-thumb::after {
+    content:"";
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+      display: none !important;
+    }
+    .slider-wrapper .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      scroll-snap-type: x mandatory;
+      margin-left: -150px;
+      
+    }
+    .slider-wrapper .image-list .image-item {
+      width: 220px;
+      height: 300px;
+      
+    }
+    .slider-scrollbar .scrollbar-thumb {
+      width: 20%;
+    }
+  }
+
+  
+  
+ 
+  
+
+
+      
+  
+  
+  
+  
+
+
