@@ -415,7 +415,7 @@ video{
   .container{
     max-width: 1000px;
     width: 95%;
-    margin-left: 12%;
+    margin-left: 14%;
     margin-right: 20%;
 }
 .slider-wrapper{
@@ -469,8 +469,8 @@ video{
     display: none;
 }
 .slider-wrapper .image-list .image-item {
-    width: 275px;
-    height: 350px;
+    width: 235px;
+    height: 310px;
     object-fit: cover;
    
 }
